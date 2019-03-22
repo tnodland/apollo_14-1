@@ -9,5 +9,11 @@
     <p>Name: <%= astronaut.name %></p>
     <p>Age: <%= astronaut.age %></p>
     <p>Job: <%= astronaut.job %></p>
+    <p>Missions:</p>
+      <section id="missions">
+        <% astronaut.missions.each do |mission| %>
+        <p><%= mission.title %>,</p>  
+        <% end %>
+      </section>
   </section>
 <% end %>
