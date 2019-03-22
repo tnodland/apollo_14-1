@@ -27,7 +27,7 @@ RSpec.describe "astronaut index page" do
       visit astronauts_path
 
       within ".average_age" do
-        expect(page).to have_content("Average age: #{Astronaut.average_age}")
+        expect(page).to have_content("Average Age: #{Astronaut.average_age}")
       end
     end
   end
