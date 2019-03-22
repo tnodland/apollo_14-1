@@ -52,5 +52,17 @@ RSpec.describe "astronaut index page" do
         end
       end
     end
+
+    it "can see total time in space for each astronaut" do
+      visit astronauts_path
+
+      within "#astronaut-#{@a1.id}" do
+        expect(page).to have_content("Time in Space: #{@a1.space_time}")
+      end
+
+      within "#astronaut-#{@a2.id}" do
+        expect(page).to have_content("Time in Space: #{@a2.space_time}")
+      end
+    end
   end
 end
